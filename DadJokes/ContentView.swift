@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    //MARK: Stored propertie
+    var currentJoke: DadJoke = DadJoke(id: "",
+                                       joke: "nigger",
+                                       status: 0)
+    
+    //MARK: Computed properties
     var body: some View {
         VStack {
             
-            Text("How do you organize a space party? You planet.")
+            Text(currentJoke.joke)
                 .multilineTextAlignment(.leading)
                 .padding(30)
                 .overlay(
@@ -29,6 +35,7 @@ struct ContentView: View {
                 Text("Another One!!!")
             })
                 .buttonStyle(.bordered)
+                .padding()
             
             
             HStack{
